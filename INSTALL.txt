@@ -1,0 +1,31 @@
+For Linux or Mac OX X:
+0- open terminal and run the following commands
+1- run "opam install graphics" and any dependencies required
+2- run "opam switch show" and ensure that it's 4.08.1
+3- in utop try running:
+
+   #require "graphics";;
+   Graphics.open_graph "";;
+
+   and a new graphics window should open.
+
+For Windows:
+0- open ubuntu and run the following commands
+1- run "opam install graphics" and any dependencies required
+2- run "opam switch show" and ensure that it's 4.08.1
+3- in utop try running:
+
+   #require "graphics";;
+   Graphics.open_graph "";;
+
+   and a new graphics window should open and you can stop here, installation is finished.
+   Continue if given the error:
+   "Fatal error: exception Graphics.Graphic_failure("Cannot open display")"
+
+4- go to link: "https://sourceforge.net/projects/xming/" to download and install an X Server
+5- in the Bash environment run "export Display=:0"
+
+Troubleshooting:
+
+1- If "opam install graphics" fails, run "opam switch create 4.08.1" and then try "opam install graphics" again.
+2- For windows, if opening the graphics window in utop fails try uninstalling Xming and re-installing 
